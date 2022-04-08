@@ -2,7 +2,7 @@ import React from "react";
 
 //components
 import Nav from "./Nav";
-import Header from "./Header";
+import Content from "./Content";
 import Footer from "./Footer";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -10,15 +10,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const Main = () => {
   return (
     <>
-      <Router>
-        <Nav />
-        <Header />
-        <Routes>
-          <Route path="/" exact />
-        </Routes>
-
-        <Footer />
-      </Router>
+      <div className="container">
+        <Router>
+          <Nav />
+          <Content />
+          <Routes>
+            <Route path="/" exact />
+          </Routes>
+          <Footer />
+        </Router>
+      </div>
     </>
   );
 };
