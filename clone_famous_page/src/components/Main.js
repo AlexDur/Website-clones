@@ -3,6 +3,7 @@ import React from "react";
 //components
 import Nav from "./Nav";
 import Content from "./Content";
+import Intersection from "./Intersection";
 import Footer from "./Footer";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -14,6 +15,7 @@ const Main = () => {
         <Router>
           <Nav />
           <Content />
+          <Intersection />
           <Routes>
             <Route path="/" exact />
           </Routes>
