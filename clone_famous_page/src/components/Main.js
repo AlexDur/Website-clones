@@ -15,7 +15,7 @@ const Main = () => {
         <Router>
           <Nav />
           <Content />
-          <Intersection />
+          {/* <Intersection /> */}
           <Routes>
             <Route path="/" exact />
           </Routes>
