@@ -3,8 +3,8 @@ import React from "react";
 //components
 import Nav from "./Nav";
 import Content from "./Content";
-import Intersection from "./Intersection";
-import Footer from "./Footer";
+/* import Intersection from "./Intersection"; */
+/* import Footer from "./Footer"; */
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -19,7 +19,7 @@ const Main = () => {
           <Routes>
             <Route path="/" exact />
           </Routes>
-          <Footer />
+          {/*  <Footer /> */}
         </Router>
       </div>
     </>
