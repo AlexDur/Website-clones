@@ -25,7 +25,8 @@ function CarouselComponent() {
             <img className="d-block w-100" src={cube_aim} alt="First slide" />
             <Carousel.Caption>
               <h4>Cube</h4>
-              <div>Aim SL grau</div>
+              <div>Aim SL </div>
+              <br />
               <div>EUR 7459,00</div>
             </Carousel.Caption>
           </Carousel.Item>
@@ -36,16 +37,18 @@ function CarouselComponent() {
             <Carousel.Caption>
               <h4>Cujo</h4>
               <div>Zuma </div>
+              <br />
               <div>EUR 810,00</div>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel_card">
             <img className="d-block w-100" src={chariot} alt="Third slide" />
 
-            <Carousel.Caption>
+            <Carousel.Caption className="caption">
               <h4>Croozer</h4>
-              <div>Kid Vaaya</div>
-              <div>EUR 906,99</div>
+              <p>Kid Vaaya</p>
+
+              <p>EUR 906,99</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel_card">
@@ -53,7 +56,8 @@ function CarouselComponent() {
 
             <Carousel.Caption>
               <h4>Hook</h4>
-              <div>Fast gearing</div>
+              <div>Fast </div>
+              <br />
               <div>EUR 1006,99</div>
             </Carousel.Caption>
           </Carousel.Item>
@@ -62,7 +66,8 @@ function CarouselComponent() {
 
             <Carousel.Caption>
               <h4>Hook</h4>
-              <div>Fast gearing</div>
+              <div>Manti Bear </div>
+              <br />
               <div>EUR 1006,99</div>
             </Carousel.Caption>
           </Carousel.Item>
@@ -74,9 +79,10 @@ function CarouselComponent() {
             />
 
             <Carousel.Caption>
-              <h4>Hook</h4>
-              <div>Fast gearing</div>
-              <div>EUR 1006,99</div>
+              <h4>Ecoco </h4>
+              <div>Fast 2</div>
+              <br />
+              <div>EUR 996,99</div>
             </Carousel.Caption>
           </Carousel.Item>
         </div>
