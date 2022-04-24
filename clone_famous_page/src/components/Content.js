@@ -36,7 +36,10 @@ const Content = () => {
                 </Link>
               </div>
               <div className="top_picks_container">
-                <h4>Top Picks</h4>
+                <div className="border_line">
+                  <h3 style={{ fontWeight: 600 }}>Top Picks</h3>
+                </div>
+
                 <CarouselComponent />
               </div>
             </div>

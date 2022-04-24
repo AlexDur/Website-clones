@@ -19,7 +19,13 @@ function CarouselComponent() {
 
   return (
     <>
-      <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel
+        slide={false}
+        controls={false}
+        indicators={false}
+        activeIndex={index}
+        onSelect={handleSelect}
+      >
         <div className="slide">
           <Carousel.Item className="carousel_card">
             <img className="d-block w-100" src={cube_aim} alt="First slide" />
@@ -46,16 +52,16 @@ function CarouselComponent() {
 
             <Carousel.Caption className="caption">
               <h4>Croozer</h4>
-              <p>Kid Vaaya</p>
-
-              <p>EUR 906,99</p>
+              <div>Kid Vaaya</div>
+              <br />
+              <div>EUR 906,99</div>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel_card">
             <img className="d-block w-100" src={hook} alt="Third slide" />
 
             <Carousel.Caption>
-              <h4>Hook</h4>
+              <h4>Brigade</h4>
               <div>Fast </div>
               <br />
               <div>EUR 1006,99</div>
