@@ -2,13 +2,52 @@ import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
 import cube_aim from "../img/cube_aim.png";
-/* import ghost_square from "../img/ghost_square.png";
-import cujo from "../img/cujo.png"; */
+import ghost_square from "../img/ghost_square.png";
+import cujo from "../img/cujo.png";
 import tce from "../img/tce.png";
 import croozer from "../img/croozer.png";
 import chariot from "../img/chariot.png";
 import hook from "../img/hook.png";
 import ecoco_turkis from "../img/ecoco_turkis.png";
+
+//Array with three objects
+const cards = [
+  {
+    image: cube_aim,
+    alt: "First slide",
+    name: "Cube",
+    model: "Carbon",
+    price: "EUR 759,00",
+  },
+  {
+    image: croozer,
+    alt: "Second slide",
+    name: "Cujo",
+    model: "Aluminium",
+    price: "EUR 810,00",
+  },
+  {
+    image: hook,
+    alt: "Third slide",
+    name: "Canyon",
+    model: "Aluminium",
+    price: "EUR 1006,99",
+  },
+  {
+    image: cujo,
+    alt: "Third slide",
+    name: "Brigade",
+    model: "Carbon",
+    price: "EUR 1250,99",
+  },
+  {
+    image: tce,
+    alt: "Third slide",
+    name: "Diamant",
+    model: "Aluminium",
+    price: "EUR 776,99",
+  },
+];
 
 function CarouselComponent() {
   const [index, setIndex] = useState(0);
@@ -16,6 +55,8 @@ function CarouselComponent() {
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
+
+  console.log(cards.image);
 
   return (
     <>
@@ -27,70 +68,23 @@ function CarouselComponent() {
         onSelect={handleSelect}
       >
         <div className="slide">
-          <Carousel.Item className="carousel_card">
-            <img className="d-block w-100" src={cube_aim} alt="First slide" />
-            <Carousel.Caption>
-              <h4>Cube</h4>
-              <div>Aim SL </div>
-              <br />
-              <div>EUR 7459,00</div>
-            </Carousel.Caption>
-          </Carousel.Item>
-
-          <Carousel.Item className="carousel_card">
-            <img className="d-block w-100" src={croozer} alt="Second slide" />
-
-            <Carousel.Caption>
-              <h4>Cujo</h4>
-              <div>Zuma </div>
-              <br />
-              <div>EUR 810,00</div>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item className="carousel_card">
-            <img className="d-block w-100" src={chariot} alt="Third slide" />
-
-            <Carousel.Caption className="caption">
-              <h4>Croozer</h4>
-              <div>Kid Vaaya</div>
-              <br />
-              <div>EUR 906,99</div>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item className="carousel_card">
-            <img className="d-block w-100" src={hook} alt="Third slide" />
-
-            <Carousel.Caption>
-              <h4>Brigade</h4>
-              <div>Fast </div>
-              <br />
-              <div>EUR 1006,99</div>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item className="carousel_card">
-            <img className="d-block w-100" src={tce} alt="Third slide" />
-
-            <Carousel.Caption>
-              <h4>Hook</h4>
-              <div>Manti Bear </div>
-              <br />
-              <div>EUR 1006,99</div>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item className="carousel_card">
-            <img
-              className="d-block w-100"
-              src={ecoco_turkis}
-              alt="Third slide"
-            />
-
-            <Carousel.Caption>
-              <h4>Ecoco </h4>
-              <div>Fast 2</div>
-              <br />
-              <div>EUR 996,99</div>
-            </Carousel.Caption>
-          </Carousel.Item>
+          {cards.map((card, index) => {
+            return (
+              <div key={index}>
+                <Carousel.Item className="carousel_card">
+                  <img src={card.image} alt="Alternative" />
+                  <br />
+                  <Carousel.Caption>
+                    <div>{card.name}</div> <br />
+                    <div>{card.model}</div>
+                    <br />
+                    <div>{card.price} </div>
+                    <br />
+                  </Carousel.Caption>
+                </Carousel.Item>
+              </div>
+            );
+          })}
         </div>
       </Carousel>
     </>
